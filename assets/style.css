@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap");
+
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+:root {
+  --white: #ffffff;
+  --green: #27694d;
+  --yellow: #daa520;
+  --red: #ef4444;
+  --brown: #383129;
+  --black: #2a2622;
+
+  --title: #2b2622;
+  --text: #7c736a;
+  --border: #e7e2da;
+
+  --background: #f7f4ef;
+  --card: #fcfaf7;
+  --secondary: #eeebe4;
+  --shadow: #c4b8a8;
+  --favorite: #eaf0ed;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.header-container {
+  p {
+    margin: 0;
+  }
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+body {
+  background-color: var(--background);
+}
+
+main {
+  h1 {
+    margin: 0;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-input {
+  height: 32px;
+  width: 240px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+}
