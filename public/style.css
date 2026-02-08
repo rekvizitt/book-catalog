@@ -35,6 +35,16 @@ header {
   border-bottom: 1px solid var(--border);
   margin-bottom: 24px;
 }
+.logo {
+  width: 32px;
+  height: 32px;
+  background: url("./assets/book.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--green);
+  padding: 8px;
+  border-radius: 4px;
+}
 
 .header-container {
   p {
