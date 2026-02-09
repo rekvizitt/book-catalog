@@ -24,7 +24,7 @@
       padding: 8px;
       margin-right: 12px;
       border-radius: 8px;
-      .logo-img {
+      .favorites-logo-img {
         fill: none;
         stroke: var(--green);
       }
@@ -51,16 +51,3 @@
     }
   }
 }
-
-/*
-<aside class="favorites">
-  <div class="favorites-header">
-    <div class="favorites-logo">
-      <img src="assets/images/heart.svg" class="logo-img" />
-    </div>
-    <div class="favorites-container">
-      <p class="favorites-title">Favorites</p>
-      <p class="favorites-subtitle">X books saved</p>
-    </div>
-  </div>
-</aside>*/

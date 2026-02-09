@@ -18,6 +18,10 @@ header {
   padding: 4px;
   margin-right: 12px;
   border-radius: 12px;
+  .logo-img {
+    stroke: var(--white);
+    fill: none;
+  }
 }
 
 .header-container {
