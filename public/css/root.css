@@ -1,0 +1,29 @@
+@import "fonts.css";
+
+:root {
+  --white: #ffffff;
+  --green: #27694d;
+  --yellow: #daa520;
+  --red: #ef4444;
+  --brown: #383129;
+  --black: #2a2622;
+
+  --title: #2b2622;
+  --text: #7c736a;
+  --border: #e7e2da;
+
+  --background: #f7f4ef;
+  --card: #fcfaf7;
+  --secondary: #eeebe4;
+  --shadow: #c4b8a8;
+  --favorite: #eaf0ed;
+
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Source Sans 3", sans-serif;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-extra-bold: 700;
+}

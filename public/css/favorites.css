@@ -1,0 +1,66 @@
+.favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 320px;
+  height: 100px;
+  .favorites-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 12px;
+    .favorites-logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      background-color: var(--favorite);
+      padding: 8px;
+      margin-right: 12px;
+      border-radius: 8px;
+      .logo-img {
+        fill: none;
+        stroke: var(--green);
+      }
+    }
+    .favorites-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      p {
+        margin: 0;
+      }
+      .favorites-title {
+        font-size: 16px;
+        font-family: var(--font-primary);
+        font-weight: var(--weight-medium);
+        color: var(--title);
+      }
+      .favorites-subtitle {
+        font-size: 12px;
+        font-family: var(--font-secondary);
+        font-weight: var(--weight-light);
+        color: var(--text);
+      }
+    }
+  }
+}
+
+/*
+<aside class="favorites">
+  <div class="favorites-header">
+    <div class="favorites-logo">
+      <img src="assets/images/heart.svg" class="logo-img" />
+    </div>
+    <div class="favorites-container">
+      <p class="favorites-title">Favorites</p>
+      <p class="favorites-subtitle">X books saved</p>
+    </div>
+  </div>
+</aside>*/

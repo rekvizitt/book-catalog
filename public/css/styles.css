@@ -1,0 +1,21 @@
+@import "root.css";
+@import "header.css";
+@import "main.css";
+@import "search.css";
+@import "card.css";
+@import "favorites.css";
+@import "footer.css";
+
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+body {
+  background-color: var(--background);
+}
