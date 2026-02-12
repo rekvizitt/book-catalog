@@ -1,3 +1,15 @@
-import { sum } from "./test.js";
+import { favoriteBooks } from "./storage.js";
+import { searchBook } from "./api.js";
 
-console.log(sum(2, 10));
+import { Book } from "./book.js";
+
+window.addEventListener("load", async () => {
+  console.log("Favorite Books:", favoriteBooks);
+  // console.log(await searchBook("Harry Potter"));
+  const booksContainer = document.getElementById("books-container");
+
+  for (let i = 0; i < 10; i++) {
+    const book = new Book("Harry Potter", "J.K. Rowling", 1997, "");
+    booksContainer.innerHTML += book.createCard();
+  }
+});
