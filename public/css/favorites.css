@@ -6,7 +6,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   width: 320px;
-  height: 100px;
+  height: auto;
   .favorites-header {
     display: flex;
     flex-direction: row;
@@ -29,7 +29,7 @@
         stroke: var(--green);
       }
     }
-    .favorites-container {
+    .favorites-title-container {
       display: flex;
       flex-direction: column;
       align-items: start;
@@ -47,6 +47,72 @@
         font-family: var(--font-secondary);
         font-weight: var(--weight-light);
         color: var(--text);
+      }
+    }
+  }
+  .favorite-books-container {
+    padding: 16px;
+    .book-card-favorite {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid var(--border);
+      .book-card-cover {
+        width: 80px;
+        height: 120px;
+        background-color: gray;
+        border-radius: 8px;
+        margin: 8px 0;
+      }
+      .book-card-info {
+        width: 180px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 12px;
+        p {
+          margin: 0;
+        }
+        .book-card-title {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 4px;
+          font-family: var(--font-primary);
+          font-weight: var(--weight-medium);
+          color: var(--title);
+        }
+        .book-card-author {
+          font-size: 14px;
+          margin-bottom: 4px;
+          font-family: var(--font-secondary);
+          font-weight: var(--weight-regular);
+          color: var(--text);
+        }
+        .book-card-year {
+          font-size: 12px;
+          font-family: var(--font-secondary);
+          font-weight: var(--weight-light);
+          color: var(--text);
+        }
+      }
+      .favorite-book-img-container {
+        display: flex;
+        justify-content: end;
+        width: 16px;
+        height: 16px;
+        padding: 4px;
+        cursor: pointer;
+        opacity: 0.8;
+        .favorite-book-img {
+          fill: var(--red);
+          stroke: var(--red);
+        }
       }
     }
   }

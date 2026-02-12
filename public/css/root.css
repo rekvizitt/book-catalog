@@ -3,6 +3,7 @@
 :root {
   --white: #ffffff;
   --green: #27694d;
+  --green-hover: color-mix(in srgb, var(--green), black 15%);
   --yellow: #daa520;
   --red: #ef4444;
   --brown: #383129;

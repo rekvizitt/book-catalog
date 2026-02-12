@@ -2,7 +2,8 @@
 @import "header.css";
 @import "main.css";
 @import "search.css";
-@import "card.css";
+@import "books-section.css";
+@import "book-card.css";
 @import "favorites.css";
 @import "footer.css";
 
