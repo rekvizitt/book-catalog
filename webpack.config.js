@@ -10,7 +10,7 @@ export default (env) => {
   // (port, entry, htmlTemplate, output, mode);
   const port = env.port ?? 3000;
   const entryPath = path.resolve(__dirname, "src", "index.js");
-  const htmlTemplate = path.resolve(__dirname, "public", "index.html");
+  const htmlTemplate = path.resolve(__dirname, "index.html");
   const outputPath = path.resolve(__dirname, "build");
   const modeBuild = env.mode ?? "development";
 
