@@ -29,7 +29,7 @@
         stroke: var(--green);
       }
     }
-    .favorites-title-container {
+    .favorites-container {
       display: flex;
       flex-direction: column;
       align-items: start;

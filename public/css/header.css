@@ -5,7 +5,6 @@ header {
   align-items: center;
   padding: 12px 0 12px 0;
   margin-bottom: 24px;
-  margin-left: 10%;
 }
 .logo {
   display: flex;
@@ -17,6 +16,7 @@ header {
   background-color: var(--green);
   padding: 4px;
   margin-right: 12px;
+  margin-left: 10%;
   border-radius: 12px;
   .logo-img {
     stroke: var(--white);

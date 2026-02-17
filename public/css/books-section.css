@@ -1,4 +1,11 @@
 .books-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+  gap: 24px;
+}
+
+.books-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
