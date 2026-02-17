@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>The Library</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="logo-img"
+        >
+          <path d="M12 7V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M3 18C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7C12 5.93913 12.4214 4.92172 13.1716 4.17157C13.9217 3.42143 14.9391 3 16 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V17C22 17.2652 21.8946 17.5196 21.7071 17.7071C21.5196 17.8946 21.2652 18 21 18H15C14.2044 18 13.4413 18.3161 12.8787 18.8787C12.3161 19.4413 12 20.2044 12 21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H3Z"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="header-container">
+        <p class="header-title">The Library</p>
+        <p class="header-subtitle">Discover your next favorite book</p>
+      </div>
+    </header>
+    <main>
+      <h1 class="title-main">Discover Your Next Great Read</h1>
+      <p class="subtitle-main">
+        Search millions of book, build your personal library, and never lose track of what to read
+        next.
+      </p>
+      <section class="search-container">
+        <div class="search-input-container">
+          <img class="search-icon" src="assets/images/search.svg" />
+          <input
+            class="search-input"
+            id="search-input"
+            type="search"
+            placeholder="Search for books by title or author..."
+          />
+        </div>
+        <button class="search-button" id="searchBtn">Search</button>
+      </section>
+      <div class="books-container">
+        <article id="books-grid" class="books-grid"></article>
+        <aside class="favorites">
+          <div class="favorites-header">
+            <div class="favorites-logo">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                class="favorites-logo-img"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                  stroke-width="1.33333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="favorites-container">
+              <p class="favorites-title">Favorites</p>
+              <p class="favorites-subtitle">X books saved</p>
+            </div>
+          </div>
+          <div class="favorite-books-container"></div>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <p>Powered by <a href="https://openlibrary.org">Open Library</a></p>
+    </footer>
+  </body>
+</html>
