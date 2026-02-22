@@ -4,9 +4,12 @@ export async function searchBook(query) {
   const url = `https://openlibrary.org/search.json?q=${encodedQuery}`;
   const result = await fetch(url)
     .then((response) => response.json())
-    .catch((error) => console.error(error))
-    .then((data) => data.docs);
+    .then((data) => data.docs)
+    .catch((error) => console.error(error));
   return result;
 }
 
-// export async function fetchCover(url) {}
+export function fetchCover(coverId) {
+  // for while without caching
+  return `https://covers.openlibrary.org/b/id/${coverId}.jpg`;
+}
