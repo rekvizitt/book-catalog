@@ -1,24 +1,29 @@
-import { favoriteBooks } from "./storage.js";
+import { favoriteBooks } from "../storage.js";
 
 export class Book {
-  constructor(title, author, year_published, cover_image_url) {
+  constructor(title, author, yearPublished, coverImageUrl) {
     this.title = title;
     this.author = author;
-    this.year_published = year_published;
-    this.cover_image_url = cover_image_url || this.usePlaceholderImage();
+    this.yearPublished = yearPublished;
+    this.coverImageUrl = coverImageUrl || this.usePlaceholderImage();
     this.favorite = false;
   }
+  // get isFavorite() {
+  //   return this.favorite;
+  // }
+
+  // event on favorite button
   toggleFavorite() {
     this.favorite = !this.favorite;
     favoriteBooks.set(this.id, this.favorite);
     favoriteBooks.save();
   }
   createCard() {
-    // Translate to document create elements (I need to addEventListeners)
+    // remake to be possible to use event listeners
     return `
     <div class="book-card">
       <div class="book-card-cover">
-        <img src="${this.cover_image_url}" alt="Book Cover" />
+        <img src="${this.coverImageUrl}" alt="Book Cover" loading="lazy" />
         <div class="book-card-favorite" tabindex="0">
           <svg
             width="16"
@@ -39,7 +44,7 @@ export class Book {
       <div class="book-card-info">
         <p class="book-card-title">${this.title}</p>
         <p class="book-card-author">${this.author}</p>
-        <p class="book-card-year">${this.year_published}</p>
+        <p class="book-card-year">${this.yearPublished}</p>
       </div>
     </div>
     `;
@@ -48,3 +53,59 @@ export class Book {
     return "./assets/images/book-cover.svg";
   }
 }
+
+// createFavoriteCard(onRemove) {
+//   const card = document.createElement("div");
+//   card.classList.add("favorite-card");
+//   card.dataset.bookId = this.id;
+
+//   const img = document.createElement("img");
+//   img.src = this.coverUrl || PLACEHOLDER_IMAGE;
+//   img.alt = this.title;
+//   img.classList.add("favorite-card-img");
+//   img.onerror = () => {
+//     img.src = PLACEHOLDER_IMAGE;
+//   };
+
+//   const info = document.createElement("div");
+//   info.classList.add("favorite-card-info");
+//   info.innerHTML = `
+//     <p class="favorite-card-title" title="${this._escapeHtml(this.title)}">${this._escapeHtml(this.title)}</p>
+//     <p class="favorite-card-author">${this._escapeHtml(this.author)}</p>
+//     <p class="favorite-card-year">${this.year}</p>
+//   `;
+
+//   const removeBtn = document.createElement("button");
+//   removeBtn.classList.add("favorite-card-remove-btn");
+//   removeBtn.setAttribute("aria-label", "Удалить из избранного");
+//   removeBtn.setAttribute("title", "Удалить из избранного");
+//   removeBtn.innerHTML = `
+//     <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//       <line x1="18" y1="6" x2="6" y2="18" stroke-width="2" stroke-linecap="round"/>
+//       <line x1="6" y1="6" x2="18" y2="18" stroke-width="2" stroke-linecap="round"/>
+//     </svg>
+//   `;
+
+//   removeBtn.addEventListener("click", () => {
+//     removeFavoriteBook(this.id);
+//     card.remove();
+
+//     // Синхронизируем кнопку в гриде поиска, если карточка там есть
+//     const gridCard = document.querySelector(
+//       `.book-card[data-book-id="${this.id}"] .book-card-favorite-btn`
+//     );
+//     if (gridCard) {
+//       gridCard.classList.remove("active");
+//     }
+
+//     if (typeof onRemove === "function") {
+//       onRemove();
+//     }
+//   });
+
+//   card.appendChild(img);
+//   card.appendChild(info);
+//   card.appendChild(removeBtn);
+
+//   return card;
+// }
