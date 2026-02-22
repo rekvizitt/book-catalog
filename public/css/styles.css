@@ -6,6 +6,7 @@
 @import "book-card.css";
 @import "favorites.css";
 @import "footer.css";
+@import "loader.css";
 
 html,
 body {
