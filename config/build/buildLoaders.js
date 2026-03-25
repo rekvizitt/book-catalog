@@ -6,7 +6,8 @@ export function buildLoaders(options) {
   };
   const assetsLoader = {
     test: /\.(png|svg|jpg|jpeg|gif)$/i,
-    type: "asset/resource"
+    type: "asset/resource",
+    generator: { filename: "assets/[hash][ext][query]" }
   };
 
   return [cssLoader, assetsLoader];

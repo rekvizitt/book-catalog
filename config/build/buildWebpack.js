@@ -10,6 +10,7 @@ export function buildWebpack(options) {
     entry: options.entry,
     output: {
       path: options.output,
+      publicPath: "/",
       filename: "[name].[contenthash:8].js",
       clean: true
     },
