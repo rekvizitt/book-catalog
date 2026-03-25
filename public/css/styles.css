@@ -7,7 +7,7 @@
 @import "favorites.css";
 @import "footer.css";
 @import "loader.css";
-
+@import "toast.css";
 html,
 body {
   scroll-behavior: smooth;
@@ -24,4 +24,32 @@ body {
   min-height: 100vh;
   font-family: var(--font-secondary);
   background-color: var(--background);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1700px) {
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
 }
