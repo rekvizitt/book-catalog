@@ -1,13 +1,25 @@
+import { showToast } from "../toast.js";
+
 export async function searchBook(query) {
-  // Todo: add loading / error /
   const encodedQuery = encodeURIComponent(query);
   const url = `https://openlibrary.org/search.json?q=${encodedQuery}`;
-  let result = await fetch(url)
-    .then((response) => response.json())
-    .then((data) => data.docs)
-    .catch((error) => console.error(error));
-  result.splice(10);
-  return result;
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 10000);
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+    if (!response.ok) {
+      showToast(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    const result = data.docs ?? [];
+    result.splice(10);
+    return result;
+  } catch (error) {
+    clearTimeout(timeoutId);
+    showToast(error);
+    return [];
+  }
 }
 
 export function fetchCover(coverId) {
